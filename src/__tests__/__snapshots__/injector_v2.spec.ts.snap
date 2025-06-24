@@ -1,0 +1,279 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`injectorV2 attribute precedence at_line takes precedence over other location attributes 1`] = `
+"
+    source 'http://rubygems.org'
+    gem 'rails'
+inserted at line 3
+    gem 'nokogiri'
+    gem 'httparty'
+
+    "
+`;
+
+exports[`injectorV2 attribute precedence replace takes precedence over all location attributes 1`] = `
+"
+    source 'http://rubygems.org'
+    gem 'django'
+    gem 'nokogiri'
+    gem 'httparty'
+
+    "
+`;
+
+exports[`injectorV2 edge cases handles at_line beyond content length 1`] = `
+"
+    source 'http://rubygems.org'
+    gem 'rails'
+    gem 'nokogiri'
+    gem 'httparty'
+
+    
+inserted"
+`;
+
+exports[`injectorV2 edge cases handles content with only one line 1`] = `
+"appended
+single line"
+`;
+
+exports[`injectorV2 edge cases handles empty body 1`] = `
+"
+    source 'http://rubygems.org'
+    gem 'rails'
+
+    gem 'nokogiri'
+    gem 'httparty'
+
+    "
+`;
+
+exports[`injectorV2 edge cases handles empty content 1`] = `
+"first line
+"
+`;
+
+exports[`injectorV2 edge cases handles negative at_line 1`] = `
+"
+    source 'http://rubygems.org'
+    gem 'rails'
+    gem 'nokogiri'
+    gem 'httparty'
+
+    "
+`;
+
+exports[`injectorV2 eof_last functionality body with newline and eof_last undefined preserves newline 1`] = `
+"# Header comment
+
+
+    source 'http://rubygems.org'
+    gem 'rails'
+    gem 'nokogiri'
+    gem 'httparty'
+
+    "
+`;
+
+exports[`injectorV2 eof_last functionality body without newline and eof_last true gets newline added 1`] = `
+"# Header comment
+
+
+    source 'http://rubygems.org'
+    gem 'rails'
+    gem 'nokogiri'
+    gem 'httparty'
+
+    "
+`;
+
+exports[`injectorV2 eof_last functionality if eof_last is false remove empty line from the end of injection body 1`] = `
+"
+    source 'http://rubygems.org'
+    gem 'rails'
+    gem 'kamikaze' # added by hygen
+    gem 'nokogiri'
+    gem 'httparty'
+
+    "
+`;
+
+exports[`injectorV2 eof_last functionality if eof_last is false with carriage return 1`] = `
+"
+    source 'http://rubygems.org'
+    gem 'rails'
+    gem 'kamikaze' # added by hygen
+    gem 'nokogiri'
+    gem 'httparty'
+
+    "
+`;
+
+exports[`injectorV2 eof_last functionality if eof_last is true insert empty line to injection body 1`] = `
+"
+    source 'http://rubygems.org'
+    gem 'rails'
+    gem 'kamikaze' # added by hygen
+
+    gem 'nokogiri'
+    gem 'httparty'
+
+    "
+`;
+
+exports[`injectorV2 location-based injection after rails 1`] = `
+"
+    source 'http://rubygems.org'
+    gem 'rails'
+    gem 'kamikaze' # added by hygen
+    gem 'nokogiri'
+    gem 'httparty'
+
+    "
+`;
+
+exports[`injectorV2 location-based injection append bottom of file 1`] = `
+"
+    source 'http://rubygems.org'
+    gem 'rails'
+    gem 'nokogiri'
+    gem 'httparty'
+
+    gem 'kamikaze' # added by hygen
+    "
+`;
+
+exports[`injectorV2 location-based injection at_line 2 (below "source") 1`] = `
+"
+    source 'http://rubygems.org'
+    gem 'kamikaze' # added by hygen
+    gem 'rails'
+    gem 'nokogiri'
+    gem 'httparty'
+
+    "
+`;
+
+exports[`injectorV2 location-based injection before rails 1`] = `
+"
+    source 'http://rubygems.org'
+    gem 'kamikaze' # added by hygen
+    gem 'rails'
+    gem 'nokogiri'
+    gem 'httparty'
+
+    "
+`;
+
+exports[`injectorV2 location-based injection prepend top of file 1`] = `
+"    gem 'kamikaze' # added by hygen
+
+    source 'http://rubygems.org'
+    gem 'rails'
+    gem 'nokogiri'
+    gem 'httparty'
+
+    "
+`;
+
+exports[`injectorV2 multi-line pattern matching correctly interpret multi-line after regex 1`] = `
+"
+    source 'http://rubygems.org'
+    gem 'rails'
+    gem 'kamikaze' # added by hygen
+    gem 'nokogiri'
+    gem 'httparty'
+
+    "
+`;
+
+exports[`injectorV2 multi-line pattern matching correctly interpret multi-line before regex 1`] = `
+"
+    source 'http://rubygems.org'
+    gem 'kamikaze' # added by hygen
+    gem 'rails'
+    gem 'nokogiri'
+    gem 'httparty'
+
+    "
+`;
+
+exports[`injectorV2 multi-line pattern matching handles complex multi-line patterns spanning multiple lines 1`] = `
+"
+function setup() {
+  const config = {
+    database: 'mysql',
+    host: 'localhost'
+  console.log('Setup complete');
+  };
+  return config;
+}
+"
+`;
+
+exports[`injectorV2 replace functionality replace takes precedence over location attributes 1`] = `
+"
+config:
+  database: mysql
+  cache: memcached
+  logging: true
+"
+`;
+
+exports[`injectorV2 replace functionality replaces multiple occurrences with global flag 1`] = `
+"
+server: postgresql
+backup: postgresql
+cache: redis
+"
+`;
+
+exports[`injectorV2 replace functionality replaces single occurrence 1`] = `
+"
+config:
+  database: postgresql
+  cache: redis
+  logging: true
+"
+`;
+
+exports[`injectorV2 replace functionality replaces with regex pattern 1`] = `
+"{
+  \\"name\\": \\"my-app\\",
+  \\"version\\": \\"1.0.0\\",
+  \\"dependencies\\": {
+    \\"react\\": \\"^19.0.0\\"
+  }
+}"
+`;
+
+exports[`injectorV2 skip_if functionality correctly interpret multi-line skip_if regex 1`] = `
+"
+    source 'http://rubygems.org'
+    gem 'rails'
+    gem 'nokogiri'
+    gem 'httparty'
+
+    "
+`;
+
+exports[`injectorV2 skip_if functionality skip_if "source" exists 1`] = `
+"
+    source 'http://rubygems.org'
+    gem 'rails'
+    gem 'nokogiri'
+    gem 'httparty'
+
+    "
+`;
+
+exports[`injectorV2 skip_if functionality skip_if pattern does not exist - should inject 1`] = `
+"
+    source 'http://rubygems.org'
+    gem 'rails'
+    gem 'kamikaze' # added by hygen
+    gem 'nokogiri'
+    gem 'httparty'
+
+    "
+`;

@@ -8,4 +8,3 @@ declare class Logger {
     ok(msg: any): void;
 }
 export default Logger;
-//# sourceMappingURL=logger.d.ts.map

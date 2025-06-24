@@ -1,8 +1,8 @@
-import path from 'path'
 import fs from 'fs-extra'
+import path from 'path'
 import type { ActionResult, RenderedAction, RunnerConfig } from '../types'
+import injectorV2 from './injector_v2'
 import createResult from './result'
-import injector from './injector'
 
 const injectOp = async (
   action: RenderedAction,
@@ -29,7 +29,8 @@ const injectOp = async (
   }
 
   const content = (await fs.readFile(absTo)).toString()
-  const injectResult = injector(action, content)
+  //const injectResult = injector(action, content)
+  const injectResult = injectorV2(action, content)
 
   if (!args.dry) {
     await fs.writeFile(absTo, injectResult)

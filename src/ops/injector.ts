@@ -1,5 +1,5 @@
-import type { RenderedAction } from '../types'
 import newline from '../newline'
+import type { RenderedAction } from '../types'
 
 const EOLRegex = /\r?\n/
 

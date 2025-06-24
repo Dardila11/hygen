@@ -2,7 +2,13 @@
   "compilerOptions": {
     "outDir": "dist",
     "strict": false,
-    "isolatedModules": false
+    "isolatedModules": false,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "lib": ["esnext", "dom"],
+    "moduleResolution": "node",
+    "skipLibCheck": true,
+    "declaration": true
   },
   "include": ["./src"],
   "exclude": ["**/__tests__/", "test/fixtures", "src/**/*.spec.ts"]

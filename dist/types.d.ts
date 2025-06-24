@@ -49,4 +49,3 @@ export declare type ParamsResult = {
     name?: string;
     dry?: boolean;
 } & object;
-//# sourceMappingURL=types.d.ts.map

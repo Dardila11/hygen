@@ -11,4 +11,3 @@ declare class ConfigResolver {
     resolve(from: string): Promise<Record<string, any>>;
 }
 export { configLookup, ConfigResolver, reversePathsToWalk };
-//# sourceMappingURL=config.d.ts.map

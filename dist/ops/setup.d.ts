@@ -11,4 +11,3 @@ declare const setup: ({ attributes: { setup, mode, verbose, force } }: {
     cwd: any;
 }) => Promise<ActionResult>;
 export default setup;
-//# sourceMappingURL=setup.d.ts.map

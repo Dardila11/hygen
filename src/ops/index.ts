@@ -8,6 +8,7 @@ const resolve = async (attributes) => {
     const inject = (await import('./inject')).default
     ops.push(inject)
   }
+
   if (attributes.echo) {
     const echo = (await import('./echo')).default
     ops.push(echo)

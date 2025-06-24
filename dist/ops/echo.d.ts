@@ -7,4 +7,3 @@ declare const echo: ({ attributes: { echo } }: {
     logger: any;
 }) => Promise<ActionResult>;
 export default echo;
-//# sourceMappingURL=echo.d.ts.map

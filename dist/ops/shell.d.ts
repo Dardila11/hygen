@@ -11,4 +11,3 @@ declare const shell: ({ attributes: { sh, spinner, sh_ignore_exit }, body }: {
     exec: any;
 }) => Promise<ActionResult>;
 export default shell;
-//# sourceMappingURL=shell.d.ts.map
